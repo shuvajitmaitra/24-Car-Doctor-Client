@@ -44,7 +44,7 @@ const Register = () => {
           onSubmit={handleSingUp}
           className="card-body w-3/4 mx-auto"
         >
-          <h3 className="text-4xl font-bold text-center">Login</h3>
+          <h3 className="text-4xl font-bold text-center">Sign Up</h3>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -94,7 +94,7 @@ const Register = () => {
               className="btn bg-[#FF3811] text-white"
               type="submit"
             >
-              Login
+              Sign Up
             </button>
           </div>
           <div className="space-y-5 text-center">

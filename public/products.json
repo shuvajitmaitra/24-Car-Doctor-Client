@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Car Break Shoe",
+        "image":"https://i.postimg.cc/525TJ79L/1.png",
+        "price" : "20.00"
+    },
+    {
+        "id": 2,
+        "title": "Car Hydraulic",
+        "image":"https://i.postimg.cc/VsT3W0Hr/2.png",
+        "price" : "20.00"
+    },
+    {
+        "id": 3,
+        "title": "Car Oil Filter",
+        "image":"https://i.postimg.cc/KvMCqcd9/3.png",
+        "price" : "20.00"
+    },
+    {
+        "id": 4,
+        "title": "Car Battery ",
+        "image":"https://i.postimg.cc/mDpKqPLn/4.png",
+        "price" : "20.00"
+    },
+    {
+        "id": 5,
+        "title": "Car Tire ",
+        "image":"https://i.postimg.cc/j52FzRH4/5.png",
+        "price" : "20.00"
+    },
+    {
+        "id": 6,
+        "title": "Car Engine Plug",
+        "image":"https://i.postimg.cc/vZwkpFyG/6.png",
+        "price" : "20.00"
+    }
+]

@@ -10,7 +10,7 @@ const Services = () => {
   }, []);
   return (
     <div className="text-center py-10">
-      <h1 className="text-3xl font-bold text-orange-500">Service</h1>
+      <h1 className="text-3xl font-bold text-[#FF3811]">Service</h1>
       <h2 className="text-5xl font-bold ">Our Service Area</h2>
       <p className=" w-1/2 text-zinc-500 mx-auto">
         the majority have suffered alteration in some form, by injected humour,

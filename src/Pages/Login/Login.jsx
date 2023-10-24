@@ -29,7 +29,7 @@ const Login = () => {
           onSubmit={handleLogin}
           className="card-body w-3/4 mx-auto"
         >
-          <h3 className="text-4xl font-bold text-center">Sign Up</h3>
+          <h3 className="text-4xl font-bold text-center">Sign In</h3>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -59,7 +59,7 @@ const Login = () => {
               className="btn bg-[#FF3811] text-white"
               type="submit"
             >
-              Sign Up
+              Sign In
             </button>
           </div>
           <div className="space-y-5 text-center">
