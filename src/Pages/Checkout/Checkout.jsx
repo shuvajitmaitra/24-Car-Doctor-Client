@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Checkout = () => {
   const service = useLoaderData();
@@ -38,7 +39,16 @@ const Checkout = () => {
     .then(res=> res.json())
     .then(data => {
         console.log(data);
-        alert("Order Confirm Successfully")
+        toast.success('Sign In Successfully !', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
     })
   };
   return (
@@ -98,6 +108,7 @@ const Checkout = () => {
           </button>
         </div>
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

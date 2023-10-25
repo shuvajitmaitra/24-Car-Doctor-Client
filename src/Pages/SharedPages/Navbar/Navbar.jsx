@@ -2,12 +2,26 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
-    logOut();
+    Swal.fire({
+      title: "Are you sure?",
+      text: "Do you want to sign out your account",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sign Out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut();
+        Swal.success("Sign Out!", "You are successfully sign out", "success");
+      }
+    });
   };
   const navLink = (
     <>
@@ -20,15 +34,6 @@ const Navbar = () => {
       <li>
         <Link to="/booking">Booked</Link>
       </li>
-      {user?.email ? (
-        <li onClick={handleSignOut}>
-          <Link to="/login"> Sign Out</Link>
-        </li>
-      ) : (
-        <li>
-          <Link to="/login">Sign In</Link>
-        </li>
-      )}
     </>
   );
   return (
@@ -72,7 +77,17 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+      {user?.email ? (
+        <span onClick={handleSignOut}>
+          {
+            user ? <button className="btn btn-outline btn-error btn-sm rounded">Sign Out</button> : <Link to="/login"><button className="btn btn-outline btn-error btn-sm rounded">Sign Out</button></Link>
+          }
+        </span>
+      ) : (
+        <span>
+          <Link to="/login"><button className="btn btn-outline btn-success btn-sm rounded">Sign In</button></Link>
+        </span>
+      )}
       </div>
     </div>
   );

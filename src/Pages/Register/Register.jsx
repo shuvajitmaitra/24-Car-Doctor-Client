@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -24,6 +25,17 @@ const Register = () => {
         updateProfile(auth.currentUser, {
           displayName: name,
         });
+        toast.success('Sign Up Successfully !', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+        e.target.reset()
       } )
         
       .catch((error) => {
@@ -116,6 +128,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

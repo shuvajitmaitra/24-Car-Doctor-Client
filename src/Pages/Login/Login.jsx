@@ -4,6 +4,7 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
   const handleLogin = (e) => {
@@ -12,7 +13,21 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
     signInUser(email, password)
-      .then((result) => console.log(result.user))
+      .then((result) => {
+        console.log(result.user);
+        
+        toast.success('Sign In Successfully !', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+        e.target.reset()
+      })
       .catch((error) => {
         console.log(error.message);
       });
@@ -82,6 +97,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
