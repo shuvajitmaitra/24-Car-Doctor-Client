@@ -16,7 +16,7 @@ const Services = () => {
         the majority have suffered alteration in some form, by injected humour,
         or randomized words which do not look even slightly believable.{" "}
       </p>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 pt-10">
         {services?.map((service) => (
           <ServiceCart key={service._id} service={service}></ServiceCart>
         ))}

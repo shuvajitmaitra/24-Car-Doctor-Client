@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name": "David John",
+        "job_title": "Engine Expert",
+        "image":"https://i.postimg.cc/8cNbV6DH/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Smit Parks",
+        "job_title": "Engine Expert",
+        "image":"https://i.postimg.cc/y8z0qBN6/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Mr. Disney",
+        "job_title": "Engine Expert",
+        "image":"https://i.postimg.cc/kg0Kmbvb/3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Maria Gomase",
+        "job_title": "Manager",
+        "image":"https://i.postimg.cc/qqrt009C/woman.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Sen Roy",
+        "job_title": "Coordinator",
+        "image":"https://i.postimg.cc/6pbGZkGD/man-2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Pitter Divilias",
+        "job_title": "Team Head",
+        "image":"https://i.postimg.cc/wBSyfD22/man-3.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Danial Jeu",
+        "job_title": "Founder",
+        "image":"https://i.postimg.cc/Lsqg3xth/man-1.jpg"
+    }
+
+
+]
