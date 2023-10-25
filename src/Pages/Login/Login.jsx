@@ -3,8 +3,9 @@ import Image from "../../assets/images/login/login.svg";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Login = () => {
-  const { signInUser } = useContext(null);
+  const { signInUser } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.value.email;
@@ -70,12 +71,12 @@ const Login = () => {
               <FcGoogle />
             </div>
             <p>
-              Have an account?{" "}
+              New in Car Doctor?{" "}
               <Link
                 to="/register"
                 className="text-[#FF3811] font-bold"
               >
-                Sign In
+                Sign Up
               </Link>
             </p>
           </div>
