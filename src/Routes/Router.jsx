@@ -6,6 +6,7 @@ import Register from "../Pages/Register/Register";
 import Checkout from "../Pages/Checkout/Checkout";
 import BookingCart from "../Pages/BookingCart/BookingCart";
 import About from "../Pages/Home/About";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -30,12 +31,17 @@ const Router = createBrowserRouter([
       },
       {
         path: "/booking",
-        element: <BookingCart></BookingCart>,
+        element: (
+          <PrivateRoute>
+            <BookingCart></BookingCart>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/checkout/:id",
         element: <Checkout></Checkout>,
-        loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
       },
     ],
   },
